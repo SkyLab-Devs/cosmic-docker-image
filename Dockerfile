@@ -9,9 +9,9 @@ RUN dnf -y install \
         && dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
         && dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
         && dnf -y install \
-        chromium chromedriver ffmpeg \
+        chromium chromedriver ffmpeg aria2 \
         figlet gcc gcc-c++ gzip megatools \
-        && curl https://raw.githubusercontent.com/SkyLab-Devs/ProjectFizilion/demon/requirements.txt -o requirements.txt \
+        && curl https://raw.githubusercontent.com/SkyLab-Devs/CosmicUserbot/starfire/requirements.txt -o requirements.txt \
         && pip3 install -U pip setuptools wheel \
         && pip3 install --no-cache-dir -r requirements.txt \
         && rm requirements.txt \
