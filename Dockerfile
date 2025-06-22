@@ -1,14 +1,14 @@
 FROM fedora:latest
 
-RUN dnf -y install \
+RUN dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+        && dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
+        && dnf -y install \
         curl git openssl \
         postgresql postgresql-devel \
         python3 python3-pip \
         python3-devel sqlite tar \
         neofetch wget xz zip \
-        pv jq --skip-unavailable\
-        && dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-        && dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
+        pv jq \
         && dnf -y install \
         chromium chromedriver ffmpeg aria2 \
         figlet gcc gcc-c++ gzip megatools \
