@@ -12,7 +12,7 @@ RUN dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-re
         && dnf -y install \
         chromium chromedriver ffmpeg aria2 \
         figlet gcc gcc-c++ gzip megatools \
-        && curl https://raw.githubusercontent.com/SkyLab-Devs/CosmicUserbot/starfire/requirements.txt -o requirements.txt \
+        && curl https://raw.githubusercontent.com/elytra8-ops/CosmicUserbot/starfire/requirements.txt -o requirements.txt \
         && pip3 install -U pip setuptools wheel \
         && pip3 install --no-cache-dir -r requirements.txt \
         && rm requirements.txt \
