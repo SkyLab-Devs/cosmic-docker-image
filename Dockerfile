@@ -7,7 +7,7 @@ RUN dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-re
         postgresql postgresql-devel \
         python3 python3-pip \
         python3-devel sqlite tar \
-        neofetch wget xz zip \
+        wget xz zip \
         pv jq \
         && dnf -y install \
         chromium chromedriver ffmpeg aria2 \
